@@ -112,12 +112,12 @@ sr.reveal(`.home__data, .home__img,
 //BELOW IS FOR THE WEBSITE COUNTER
 
 
+counterElement = document.getElementsByClassName('count')[0];
+
+updateCounter()
+
 function updateCounter() {
     fetch('https://api.countapi.xyz/update/hotinthebiscuit/hotinthebiscuit/?amount=1')
     .then(res => res.json())
     .then(data => counterElement.innerHTML = data.value)
 }
-
-updateCounter()
-
-counterElement = document.getElementsByClassName('count')[0];
