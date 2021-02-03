@@ -109,9 +109,10 @@ sr.reveal(`.home__data, .home__img,
     interval: 200
 })
 
+
+
+
 //BELOW IS FOR THE WEBSITE COUNTER
-
-
 counterElement = document.getElementsByClassName('count')[0];
 
 updateCounter()
@@ -121,3 +122,6 @@ function updateCounter() {
     .then(res => res.json())
     .then(data => counterElement.innerHTML = data.value)
 }
+
+
+
