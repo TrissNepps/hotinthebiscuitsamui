@@ -93,7 +93,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1,
@@ -403,6 +403,7 @@ img {
 }
 .home__img {
   width: 300px;
+
   justify-self: center;
   position: relative;
   z-index: 5;
@@ -461,24 +462,9 @@ img {
   margin: 5px 0 5px 0;
 }
 
-.button:active {
-  transform: scale(0.98);
-  box-shadow: none;
-}
-
-.button.spin {
-  transition-delay: 3.1s;
-  transform: rotate(360deg);
-}
-
-.button.spin:hover {
-  opacity: 0.9;
-  margin: 5px 0 5px 0;
-}
-
-.button.spin:active {
-  transition-duration: 1s;
-  transform: scale(0.98);
+.button:active,
+.button:focus {
+  transform: scale(0.96);
   box-shadow: none;
 }
 
