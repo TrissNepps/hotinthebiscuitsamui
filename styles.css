@@ -76,6 +76,7 @@ body.dark-theme {
   --text-color: #525353;
   --body-color: #b9fffc;
   --container-color: rgb(255, 255, 255);
+    transition: all 1s;
 }
 
 /*======== Button Dark/Light =============*/
@@ -86,6 +87,7 @@ body.dark-theme {
   color: var(--text-color);
   font-size: 1rem;
   cursor: pointer;
+
 }
 
 body {
@@ -273,17 +275,9 @@ img {
 .home__container {
   height: calc(100vh - var(--header-height));
   align-content: center;
-  background: #333;
 
-  background-image: linear-gradient(
-      to bottom right,
-      rgba(164, 235, 243, 0.5),
-      rgba(255, 159, 95, 0.3)
-    ),
-    url(../images/main2.jpg);
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 8vh, 100% 0, 100% 87vh, 0 100%);
+
+
   padding: 0 2rem;
 }
 .home__container1 {
@@ -665,7 +659,24 @@ a.menu__button i {
 .are {
   color: var(--first-color);
 }
+.image-container-stuff{
+  padding-bottom: 1rem;
+  margin-right: 5vw;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 10vh;
+}
 
+.flex-div{
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
 /*======== CONTACT =============*/
 .contact__container {
   text-align: center;
@@ -697,7 +708,10 @@ a.menu__button i {
 .bbb {
   width: 50%;
   float: left;
-  padding-right: 1rem;
+  padding: .5rem;
+  position: relative;
+  right: 1rem;
+
 }
 
 .footer__social {
@@ -737,6 +751,17 @@ a.menu__button i {
 }
 
 /*======== MEDIA QUERIES =============*/
+
+@media screen and (min-width: 275px) {
+  .flex-container{
+    bottom: 0;
+  }
+
+  .ddd{
+    position: relative;
+    top: -10vh;
+  }
+}
 @media screen and (min-width: 576px) {
   .home__container,
   .about__container,
@@ -770,6 +795,8 @@ a.menu__button i {
   .contact__button {
     justify-self: center;
   }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -777,6 +804,7 @@ a.menu__button i {
     margin: 0;
   }
 
+  
   .section {
     padding-top: 4rem;
   }
@@ -859,6 +887,7 @@ a.menu__button i {
     margin-right: auto;
   }
 
+
   .services__content {
     width: 350px;
   }
@@ -921,9 +950,7 @@ a.menu__button i {
     margin-bottom: var(--mb-3);
   }
 
-  .home___img {
-    width: 225px;
-  }
+ 
 
   .servicess__description {
     padding: 0rem;
